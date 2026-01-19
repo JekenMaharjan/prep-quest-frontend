@@ -12,7 +12,6 @@ export type Question = {
 export type QuestionInput = Omit<Question, "id">;
 
 // ------------------ API URL ------------------
-// const API_URL = "http://localhost:5000/api/Questions"; 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL!;
 
 // ------------------ API Functions ------------------
