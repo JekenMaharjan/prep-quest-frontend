@@ -16,16 +16,16 @@ const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL!;
 
 // ------------------ API Functions ------------------
 export const getQuestions = () =>
-    axios.get<Question[]>(API_BASE_URL);
+    axios.get<Question[]>(`${API_BASE_URL}/api/Questions`);
 
 export const getQuestionById = (id: number) =>
-    axios.get<Question>(`${API_BASE_URL}/${id}`);
+    axios.get<Question>(`${API_BASE_URL}/api/Questions/${id}`);
 
 export const createQuestion = (question: QuestionInput) =>
-    axios.post(API_BASE_URL, question);
+    axios.post(`${API_BASE_URL}/api/Questions`, question);
 
 export const updateQuestion = (id: number, question: Question) =>
-    axios.put(`${API_BASE_URL}/${id}`, question);
+    axios.put(`${API_BASE_URL}/api/Questions/${id}`, question);
 
 export const deleteQuestion = (id: number) =>
-    axios.delete(`${API_BASE_URL}/${id}`);
+    axios.delete(`${API_BASE_URL}/api/Questions/${id}`);
